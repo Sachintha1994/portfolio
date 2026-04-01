@@ -1,6 +1,5 @@
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
-import typography from "@tailwindcss/typography";
 
 export default {
     darkMode: ["class"],
@@ -58,27 +57,7 @@ export default {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-			typography: {
-        DEFAULT: {
-          css: {
-            table: {
-              width: '100%',
-            },
-            'th,td': {
-              padding: '0.75rem',
-              borderColor: 'var(--tw-prose-td-borders)',
-            },
-            th: {
-              backgroundColor: 'var(--tw-prose-thead-bg)',
-              fontWeight: '600',
-            },
-            thead: {
-              borderBottom: '2px solid var(--tw-prose-td-borders)',
-            },
-          },
-        },
-      },
   	}
   },
-  plugins: [animate, typography],
+  plugins: [animate],
 } satisfies Config;
