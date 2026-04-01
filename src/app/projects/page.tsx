@@ -224,14 +224,6 @@ export default function ProjectsPage() {
                       </Button>
                     </Link>
                   )}
-                  {project.link && (
-                    <Link href={project.link} target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" size="sm">
-                        <LinkIcon className="w-4 h-4 mr-2" />
-                        Visit
-                      </Button>
-                    </Link>
-                  )}
                 </CardFooter>
               </Card>
             </motion.div>
