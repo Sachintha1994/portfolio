@@ -100,29 +100,29 @@ export default function ContactPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <Link
-                href="mailto:bbayburtlu@hotmail.com"
+                href="mailto:thilina.sachintha17@gmail.com"
                 className="flex items-center space-x-2 text-gray-500 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
               >
                 <Mail className="w-5 h-5" />
-                <span>bbayburtlu@hotmail.com</span>
+                <span>thilina.sachintha17@gmail.com</span>
               </Link>
               <Link
-                href="https://github.com/byigitt"
+                href="https://github.com/Sachintha1994"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-gray-500 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
               >
                 <Github className="w-5 h-5" />
-                <span>github.com/byigitt</span>
+                <span>github.com/Sachintha1994</span>
               </Link>
               <Link
-                href="https://linkedin.com/in/bbayburtlu"
+                href="https://www.linkedin.com/in/thilina-weerasinghe/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-gray-500 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
-                <span>linkedin.com/in/bbayburtlu</span>
+                <span>linkedin.com/in/thilina-weerasinghe</span>
               </Link>
             </CardContent>
           </Card>

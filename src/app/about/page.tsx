@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heart, Coffee, Rocket, ExternalLink, Github, Link as LinkIcon } from "lucide-react";
+import { Heart, Rocket, ExternalLink, Github, Link as LinkIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,91 +10,54 @@ const aboutSections = [
   {
     title: "Hello World!",
     icon: <Heart className="h-5 w-5 text-primary" />,
-    content: "I'm Barış, a 21 years old junior software engineering student who turned a passion for gaming servers into a love for web development. When I'm not coding, you'll find me exploring new tech, contributing to open-source, or probably debugging with an energy drink in hand.",
+    content: "I'm Thilina Weerasinghe, a passionate Software Engineer with hands-on experience building scalable backend services and full-stack applications. I love crafting clean architectures, solving complex distributed systems problems, and delivering products that make a real difference.",
   },
   {
     title: "What I Do",
     icon: <Rocket className="h-5 w-5 text-primary" />,
-    content: "I build modern web applications with a focus on user experience and performance. I love turning complex problems into simple, beautiful, and intuitive solutions.",
+    content: "I specialize in Java and Spring Boot for robust backend development, and extend my skills to the frontend with React and Angular. I'm experienced deploying cloud-native applications on AWS using Docker and Kubernetes, and I enjoy building everything from mobile payment platforms to real estate portals.",
   },
 ];
 
-const portfolioProjects = [
+const portfolioProjects: {
+  title: string;
+  description: string;
+  image: string;
+  liveUrl?: string;
+  githubUrl?: string;
+  tags: string[];
+}[] = [
   {
-    title: "Personal Portfolio",
-    description: "My personal portfolio website built with Next.js 15, TypeScript, and Tailwind CSS.",
-    image: "https://bayburt.lu/portfolio/portfolio.png",
-    liveUrl: "https://portfolio.bayburt.lu",
-    githubUrl: "https://github.com/byigitt/portfolio",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/UI"],
+    title: "DhiraaguPay",
+    description: "Mobile payment platform for Dhiraagu — Maldives' leading telecom operator. Built with Java and Spring Boot microservices, deployed on AWS via Docker and Kubernetes with PostgreSQL for data management.",
+    image: "/dhiraagupay.png",
+    tags: ["Java", "Spring Boot", "PostgreSQL", "Docker", "Kubernetes", "AWS"],
   },
   {
-    title: "Soulana",
-    description: "Soulana is a web application that allows users to donate secure, fast and transparently using blockchain technology. Ostim Solana Hackathon, 1st place.",
-    image: "https://bayburt.lu/portfolio/soulana.png",
-    liveUrl: "https://cyberia-frontend.vercel.app",
-    githubUrl: "https://github.com/wearesoulana/soulana-frontend",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/UI"],
+    title: "One App",
+    description: "A comprehensive one-stop mobile banking and financial services application. Developed scalable backend APIs and microservices with Spring Boot, supporting thousands of concurrent users.",
+    image: "/oneapp.png",
+    tags: ["Java", "Spring Boot", "PostgreSQL", "Microservices", "AWS", "Docker"],
   },
   {
-    title: "imatil",
-    description: "imatil is a modern, browser-based file conversion tool built with Next.js 15 that enables users to convert media files directly in their browser using WebAssembly technology.",
-    image: "https://bayburt.lu/portfolio/imatil.png",
-    liveUrl: "https://i.bayburt.lu",
-    githubUrl: "https://github.com/byigitt/imatil",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "WebAssembly", "Shadcn/UI", "FFMPEG"]
+    title: "LoopNet",
+    description: "A feature-rich real estate listing and search platform built with Spring Boot on the backend and Angular on the frontend, backed by MySQL for property data management.",
+    image: "/loopnet.png",
+    liveUrl: "https://www.loopnet.com",
+    tags: ["Spring Boot", "Angular", "MySQL", "REST API"],
   },
   {
-    title: "cankaya.chat",
-    description: "cankaya.chat is a modern, browser-based chat application built with Next.js 15 that enables users to chat with each other anonymously using WebSocket technology.",
-    image: "https://bayburt.lu/portfolio/cankayachat.png",
-    liveUrl: "https://cankaya.chat",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "WebSocket", "PWA"]
+    title: "Blog Post Controller System",
+    description: "A full-featured content management system for creating, editing, and publishing blog posts. Built with C# and ASP.NET Core MVC backed by SQL Server, with an Angular frontend.",
+    image: "/blogpost.png",
+    tags: ["C#", "ASP.NET Core", "SQL Server", "Angular"],
   },
   {
-    title: "smartmove",
-    description: "smartmove is an AI-powered passenger analysis system for the Ankara Metro network that combines real-time passenger counting using YOLOv8 object detection and predictive analytics to forecast crowd density. Ostim AI Competition, 2nd place.",
-    image: "https://bayburt.lu/portfolio/smartmove.png",
-    githubUrl: "https://github.com/byigitt/smartmove",
-    tags: ["Python", "Numpy", "Pandas", "Scikit-learn", "Seaborn", "YOLOv8", "Shadcn/UI"]
+    title: "Point of Sale System",
+    description: "A robust POS application for retail businesses with inventory management, sales tracking, receipts, and daily reporting. Built using C#, ASP.NET, and SQL Server with an Angular-powered UI.",
+    image: "/pos.png",
+    tags: ["C#", "ASP.NET", "SQL Server", "Angular"],
   },
-  {
-    title: "Flashy",
-    description: "Flashy is a modern, intuitive flashcard application built with Next.js 15 that helps users study effectively through digital flashcards. Features include group organization, study mode with shuffle functionality, and smooth animations.",
-    image: "https://bayburt.lu/portfolio/flashy.png", 
-    liveUrl: "https://flashy-byigitt.vercel.app/",
-    githubUrl: "https://github.com/byigitt/flashy",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/UI"]
-  },
-  {
-    title: "Suncore",
-    description: "Suncore is an innovative open-source audio transformation platform inspired by nightcore.studio, designed to help users create nightcore versions of their favorite music. Features include real-time playback speed adjustment, reverb control, bass boost, and SoundCloud API integration.",
-    image: "https://bayburt.lu/portfolio/suncore.png",
-    liveUrl: "https://suncore.vercel.app",
-    githubUrl: "https://github.com/byigitt/suncore",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/UI", "Tone.js"]
-  },
-  {
-    title: "Tourist AI Planner",
-    description: "Tourist AI Planner is a web application that helps users plan their trips by providing personalized recommendations for destinations, activities, and accommodations. Did my internship here. ",
-    image: "https://bayburt.lu/portfolio/tourist.png",
-    liveUrl: "https://touristapplication.com",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-  },
-  {
-    title: "StarSalesInv",
-    description: "Star Sales & Investment is committed to delivering high-quality products at competitive prices to businesses of all sizes.",
-    image: "https://bayburt.lu/portfolio/starsales.png",
-    liveUrl: "https://starsalesinv.com",
-    tags: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    title: "Wholesale Template",
-    description: "Wholesale Template is a website template for wholesale businesses.",
-    image: "https://bayburt.lu/portfolio/template.png",
-    liveUrl: "https://bayburt.lu/template1",
-    tags: ["HTML", "CSS", "JavaScript"],
-  }
 ];
 
 const container = {
@@ -123,7 +86,7 @@ export default function AboutPage() {
           About Me
         </h1>
         <p className="mt-4 text-muted-foreground max-w-[700px]">
-          Caffeine-fueled coder turning ideas into reality
+          Software Engineer passionate about building impactful, scalable systems
         </p>
       </motion.div>
 
@@ -168,10 +131,7 @@ export default function AboutPage() {
               className="group relative"
             >
               <Card className="h-full overflow-hidden hover:shadow-lg transition-all">
-                <Link 
-                  href={project.liveUrl || project.githubUrl || ""} 
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <div
                   className="relative block aspect-video group cursor-pointer overflow-hidden"
                 >
                   <div className="relative w-full h-full transform transition-transform duration-300 group-hover:scale-105">
@@ -181,11 +141,21 @@ export default function AboutPage() {
                       fill
                       className="object-cover transition-all duration-300 group-hover:blur-sm"
                     />
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black/20">
-                      <LinkIcon className="w-8 h-8 text-white" />
-                    </div>
+                    {project.liveUrl && (
+                      <Link
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black/20"
+                      >
+                        <LinkIcon className="w-8 h-8 text-white" />
+                      </Link>
+                    )}
+                    {!project.liveUrl && (
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black/20" />
+                    )}
                   </div>
-                </Link>
+                </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                   <p className="text-muted-foreground mb-4">{project.description}</p>
@@ -229,18 +199,6 @@ export default function AboutPage() {
           ))}
         </div>
       </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-        className="mt-12 text-center"
-      >
-        <div className="flex items-center justify-center gap-2 text-muted-foreground">
-          <Coffee className="h-5 w-5" />
-          <p>Powered by Monster Energy and curiosity</p>
-        </div>
-      </motion.div>
     </div>
   );
-} 
+}

@@ -6,78 +6,66 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const experience = [
   {
-    company: "Cankaya University",
-    location: "Ankara, Turkey",
-    position: "Undergraduate Teaching Assistant",
-    period: "Nov 2024 - Present",
+    company: "PayMedia",
+    location: "Colombo, Sri Lanka",
+    position: "Software Engineer",
+    period: "Aug 2024 - Present",
     description: [
       {
-        id: "cankaya-1",
-        text: "Assisting in SENG271 (Software Project I), SENG272 (Software Project II), SENG384 (Software Project IV), SENG101 (Computer Programming I) and SENG102 (Computer Programming II) courses.",
+        id: "paymedia-1",
+        text: "Designing and developing scalable backend services using Java and Spring Boot for a leading fintech platform.",
       },
       {
-        id: "cankaya-2",
-        text: "Supporting students with programming concepts, reviewing assignments, and providing guidance in software development projects.",
+        id: "paymedia-2",
+        text: "Building and maintaining microservices deployed on AWS using Docker and Kubernetes for high availability.",
+      },
+      {
+        id: "paymedia-3",
+        text: "Collaborating across teams to deliver DhiraaguPay and One App — mobile payment and banking platforms serving thousands of users.",
+      },
+      {
+        id: "paymedia-4",
+        text: "Working with PostgreSQL for data management and implementing RESTful APIs for mobile and web clients.",
       },
     ],
   },
   {
-    company: "Tourist: Travel the World",
+    company: "Xeleris Inc.",
     location: "Remote",
-    position: "Web Development Intern",
-    period: "July 2024 - Nov 2024",
+    position: "Associate Software Engineer",
+    period: "Apr 2023 - Aug 2024",
     description: [
       {
-        id: "tourist-1",
-        text: "Collaborated with the development team to design and implement new features for the company's AI-powered travel planning platform.",
+        id: "xeleris-1",
+        text: "Developed full-stack features for the LoopNet real estate platform using Spring Boot (backend) and Angular (frontend).",
       },
       {
-        id: "tourist-2",
-        text: "Worked with web development technologies and contributed to both frontend and backend development tasks.",
+        id: "xeleris-2",
+        text: "Managed MySQL databases, wrote complex queries, and optimized application performance.",
       },
       {
-        id: "tourist-3",
-        text: "Implemented CI/CD pipelines, managed containerized deployments, and optimized development workflows.",
+        id: "xeleris-3",
+        text: "Participated in agile ceremonies and contributed to sprint planning, code reviews, and technical documentation.",
       },
     ],
   },
   {
-    company: "Google Game and Application Academy",
-    location: "Istanbul, Turkey",
-    position: "Trainee",
-    period: "Nov 2023 - July 2024",
+    company: "Institute of Java Software Engineering",
+    location: "Sri Lanka",
+    position: "Intern Full Stack Developer",
+    period: "Jan 2023 - Aug 2023",
     description: [
       {
-        id: "google-1",
-        text: "Participated in a rigorous training program focused on game and application development using industry-standard tools and practices.",
+        id: "ijse-1",
+        text: "Developed web applications using C# and ASP.NET Core with Angular for the frontend.",
       },
       {
-        id: "google-2",
-        text: "Collaborated on team projects, enhancing skills in software design, coding, and project management in a professional setting.",
+        id: "ijse-2",
+        text: "Built a Blog Post Controller System and a Point of Sale System, gaining hands-on experience with SQL Server and MVC architecture.",
       },
       {
-        id: "google-3",
-        text: "Engaged in hands-on learning and developed proficiency in modern development environments.",
-      },
-    ],
-  },
-  {
-    company: "G.Round",
-    location: "Los Angeles, CA (Remote)",
-    position: "QA Tester",
-    period: "May 2023 - May 2024",
-    description: [
-      {
-        id: "ground-1",
-        text: "Performed comprehensive testing of pre-release games to identify bugs, performance issues, and potential improvements.",
-      },
-      {
-        id: "ground-2",
-        text: "Provided detailed feedback and reports to developers, enhancing the overall quality and user experience of gaming products.",
-      },
-      {
-        id: "ground-3",
-        text: "Developed expertise in QA methodologies, tools, and processes while working within a dynamic international team.",
+        id: "ijse-3",
+        text: "Learned industry best practices in software development, version control with GitHub, and collaborative development workflows.",
       },
     ],
   },
@@ -166,4 +154,4 @@ export default function ExperiencePage() {
       </motion.div>
     </div>
   );
-} 
+}

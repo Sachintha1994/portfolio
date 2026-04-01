@@ -1,29 +1,34 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Globe, Laptop, Terminal } from "lucide-react";
+import { Code2, Globe, Laptop, Terminal, Cloud } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const skills = {
   programmingLanguages: {
     icon: <Code2 className="h-5 w-5" />,
     title: "Programming Languages",
-    items: ["TypeScript", "JavaScript", "Java", "Python", "PHP", "C", "Go", "SQL", "C#", "Julia"],
+    items: ["Java", "Python", "JavaScript", "TypeScript", "C#", "SQL"],
   },
-  technologies: {
+  frameworks: {
     icon: <Terminal className="h-5 w-5" />,
-    title: "Technologies",
-    items: ["Next.js", "Node.js", "React.js", "Express", "EJS", "MongoDB", "MySQL", "Git", "Postman", "Redis"],
+    title: "Frameworks & Libraries",
+    items: ["Spring Boot", "Spring MVC", "React", "Node.js", "Angular", "ASP.NET Core", "Hibernate", "JPA"],
   },
-  tools: {
+  databases: {
     icon: <Laptop className="h-5 w-5" />,
-    title: "Tools",
-    items: ["Cursor", "Ollama", "Visual Studio Code", "Adobe Photoshop", "Figma", "Adobe Premiere", "Vegas Pro"],
+    title: "Databases",
+    items: ["MySQL", "PostgreSQL", "SQL Server", "Redis"],
+  },
+  cloud: {
+    icon: <Cloud className="h-5 w-5" />,
+    title: "Cloud & DevOps",
+    items: ["AWS", "Azure", "Docker", "Kubernetes", "Linux", "GitHub", "CI/CD", "Microservices"],
   },
   languages: {
     icon: <Globe className="h-5 w-5" />,
     title: "Languages",
-    items: ["Turkish (Native)", "English (Fluent)", "German (Beginner)"],
+    items: ["Sinhala (Native)", "English (Professional)"],
   },
 };
 
@@ -140,4 +145,4 @@ export default function SkillsPage() {
       </motion.div>
     </div>
   );
-} 
+}

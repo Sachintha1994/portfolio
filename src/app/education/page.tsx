@@ -6,20 +6,20 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const education = [
   {
-    school: "Cankaya University",
-    location: "Ankara, Turkey",
-    degree: "Bachelor of Engineering in Software",
-    period: "Oct. 2022 - June 2026 (Expected)",
-    gpa: "GPA: 3.19",
-    description: "Focused on software development and computer science fundamentals.",
+    school: "University of Peradeniya",
+    location: "Peradeniya, Sri Lanka",
+    degree: "Bachelor of Science in Engineering",
+    period: "2016 - 2021",
+    gpa: "",
+    description: "Studied engineering fundamentals with a focus on software and computer systems. Developed strong analytical and problem-solving skills through rigorous academic training.",
   },
   {
-    school: "Icel Anatolian Highschool",
-    location: "Mersin, Turkey",
-    degree: "High School Diploma",
-    period: "Sep. 2017 - June 2021",
-    gpa: "GPA: 3.74 (92.6/100.0)",
-    description: "Graduated with honors.",
+    school: "Rajapaksa Central College",
+    location: "Sri Lanka",
+    degree: "G.C.E. Advanced Level Examination",
+    period: "2015",
+    gpa: "",
+    description: "Completed Advanced Level studies, building a strong foundation in mathematics and sciences.",
   },
 ];
 
@@ -90,7 +90,9 @@ export default function EducationPage() {
                       {edu.location}
                     </span>
                   </div>
-                  <p className="text-sm font-medium text-primary">{edu.gpa}</p>
+                  {edu.gpa && (
+                    <p className="text-sm font-medium text-primary">{edu.gpa}</p>
+                  )}
                   <p className="text-sm text-gray-500 dark:text-gray-400">
                     {edu.description}
                   </p>
@@ -102,4 +104,4 @@ export default function EducationPage() {
       </motion.div>
     </div>
   );
-} 
+}

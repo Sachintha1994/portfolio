@@ -1,185 +1,58 @@
-export interface Project {
-  title: string;
-  description: string;
-  github?: string;
-  link?: string;
-  tags: string[];
-  repo?: {
-    owner: string;
-    name: string;
-  };
-}
-
-export const projects: Project[] = [
-  // Web Applications
+export const projects = [
   {
-    title: "Suncore",
-    description: "An open-source offline web-based audio processor with features like nightcore effect, reverb, and bass boost.",
-    github: "https://github.com/byigitt/suncore",
-    tags: ["Next.js", "TypeScript", "Audio Processing", "Web Audio API"],
-    repo: {
-      owner: "byigitt",
-      name: "suncore"
-    },
-    link: "https://suncore.vercel.app"
+    title: "Working Time Application Backend",
+    description: "A Spring Boot backend for tracking employee working hours, managing schedules, and generating reports. Features JWT authentication and role-based access.",
+    tags: ["Java", "Spring Boot"],
+    github: "https://github.com/Sachintha1994/Working-time-application-Backend",
+    repo: { owner: "Sachintha1994", name: "Working-time-application-Backend" },
   },
   {
-    title: "Flashy",
-    description: "Modern offline flashcard application for students to use.",
-    github: "https://github.com/byigitt/flashy",
-    tags: ["Next.js", "TypeScript", "Offline", "Study", "Flashcards"],
-    repo: {
-      owner: "byigitt",
-      name: "flashy"
-    },
-    link: "https://flashy-byigitt.vercel.app"
+    title: "User Management Backend",
+    description: "A RESTful API built with Java and Spring Boot for managing users, roles, and permissions. Features CRUD operations and JWT-based authentication.",
+    tags: ["Java", "Spring Boot"],
+    github: "https://github.com/Sachintha1994/User-Management-Backend",
+    repo: { owner: "Sachintha1994", name: "User-Management-Backend" },
   },
   {
-    title: "OneTimeLink",
-    description: "One-time-link generator for uploading files.",
-    github: "https://github.com/byigitt/onetimelink",
-    tags: ["Next.js", "TypeScript", "File Upload", "One-Time Links"],
-    repo: {
-      owner: "byigitt",
-      name: "onetimelink"
-    }
+    title: "Point of Sale System",
+    description: "A Java-based POS system for retail operations including product management, sales transactions, cart management, and daily reports.",
+    tags: ["Java"],
+    github: "https://github.com/Sachintha1994/POS",
+    repo: { owner: "Sachintha1994", name: "POS" },
   },
   {
-    title: "URL Shortener",
-    description: "A simple but effective URL shortener service built with JavaScript.",
-    github: "https://github.com/byigitt/shrtn",
-    tags: ["JavaScript", "URL Shortening", "Web App"],
-    repo: {
-      owner: "byigitt",
-      name: "shrtn"
-    }
+    title: "Book Store Management",
+    description: "A Python application for managing a bookstore inventory, including CRUD operations for books, authors, and categories.",
+    tags: ["Python"],
+    github: "https://github.com/Sachintha1994/book-store-management",
+    repo: { owner: "Sachintha1994", name: "book-store-management" },
   },
   {
-    title: "React Note",
-    description: "Compact note-taking application optimized for mobile use.",
-    github: "https://github.com/byigitt/react-note",
-    tags: ["React", "JavaScript", "Mobile-First", "Notes"],
-    repo: {
-      owner: "byigitt",
-      name: "react-note"
-    }
-  },
-
-  // API & Backend
-  {
-    title: "SAPI - Simple Spotify API",
-    description: "A simplified implementation of the Spotify API for easier integration.",
-    github: "https://github.com/byigitt/sapi",
-    tags: ["JavaScript", "Spotify API", "API", "Node.js"],
-    repo: {
-      owner: "byigitt",
-      name: "sapi"
-    }
+    title: "Riyasewana Scraper",
+    description: "A Python web scraper for the Riyasewana vehicle marketplace to extract and analyze vehicle listings, prices, and trends.",
+    tags: ["Python"],
+    github: "https://github.com/Sachintha1994/riyasewana-scraper",
+    repo: { owner: "Sachintha1994", name: "riyasewana-scraper" },
   },
   {
-    title: "DDGS - DuckDuckGo Search",
-    description: "A TypeScript package that allows you to search the web using DuckDuckGo's API.",
-    github: "https://github.com/eudalabs/ddgs",
-    tags: ["TypeScript", "Node.js", "Search", "API"],
-    repo: {
-      owner: "eudalabs",
-      name: "ddgs"
-    }
-  },
-
-  // Automation Tools
-  {
-    title: "Discord URL Spammer",
-    description: "A tool for Discord vanity URL management with features for automated URL acquisition and monitoring.",
-    github: "https://github.com/byigitt/url",
-    tags: ["JavaScript", "Discord API", "Automation"],
-    repo: {
-      owner: "byigitt",
-      name: "url"
-    }
+    title: "DevOps Automation",
+    description: "A collection of DevOps automation scripts and configurations for CI/CD pipelines, infrastructure management, and deployment workflows.",
+    tags: ["Java", "DevOps"],
+    github: "https://github.com/Sachintha1994/devops-automation",
+    repo: { owner: "Sachintha1994", name: "devops-automation" },
   },
   {
-    title: "Spotify Daily Playlist",
-    description: "Automatically creates daily playlists on Spotify based on your most listened tracks.",
-    github: "https://github.com/byigitt/spotify-daily-playlist",
-    tags: ["JavaScript", "Spotify API", "Automation", "Node.js"],
-    repo: {
-      owner: "byigitt",
-      name: "spotify-daily-playlist"
-    }
+    title: "Monitoring Demo",
+    description: "A Spring Boot application demonstrating application monitoring with Prometheus and Grafana, including metrics collection and dashboard visualization.",
+    tags: ["Java", "Spring Boot", "DevOps"],
+    github: "https://github.com/Sachintha1994/monitoring-demo",
+    repo: { owner: "Sachintha1994", name: "monitoring-demo" },
   },
   {
-    title: "Visa Checker",
-    description: "Automated Schengen visa appointment tracker with Telegram notifications.",
-    github: "https://github.com/byigitt/visa-checker",
-    tags: ["TypeScript", "Automation", "Telegram", "Notifications"],
-    repo: {
-      owner: "byigitt",
-      name: "visa-checker"
-    }
+    title: "Maven Project",
+    description: "A foundational Java project using Maven build system, demonstrating dependency management, project structure, and build lifecycle.",
+    tags: ["Java"],
+    github: "https://github.com/Sachintha1994/mavenproject1",
+    repo: { owner: "Sachintha1994", name: "mavenproject1" },
   },
-
-  // Development Tools
-  {
-    title: "Web Scraper",
-    description: "A Python web scraper for supplementler.com to extract and process product information efficiently.",
-    github: "https://github.com/byigitt/web-scraper-test",
-    tags: ["Python", "BeautifulSoup", "Selenium", "Web Scraping"],
-    repo: {
-      owner: "byigitt",
-      name: "web-scraper-test"
-    }
-  },
-  {
-    title: "Transcriptor",
-    description: "A Python-based tool using Whisper AI to automatically transcribe audio from YouTube videos.",
-    github: "https://github.com/byigitt/transcriptor",
-    tags: ["Python", "Whisper AI", "YouTube", "Google Colab"],
-    repo: {
-      owner: "byigitt",
-      name: "transcriptor"
-    }
-  },
-  {
-    title: "Ollama Chat",
-    description: "Chat with your local LLM model using Ollama API inside your terminal.",
-    github: "https://github.com/byigitt/ollama-chat",
-    tags: ["JavaScript", "CLI", "LLM", "AI"],
-    repo: {
-      owner: "byigitt",
-      name: "ollama-chat"
-    }
-  },
-
-  // CLI & Utilities
-  {
-    title: "AIC - AI Commit Messages",
-    description: "A CLI tool that generates commit messages using AI, streamlining the git workflow for developers.",
-    github: "https://github.com/eudalabs/aic",
-    tags: ["TypeScript", "AI", "CLI", "Git"],
-    repo: {
-      owner: "eudalabs",
-      name: "aic"
-    }
-  },
-  {
-    title: "Wordle Finder",
-    description: "A tool designed to find the best words for the popular Wordle game.",
-    github: "https://github.com/byigitt/wordle-finder",
-    tags: ["JavaScript", "Algorithm", "Game Helper", "CLI"],
-    repo: {
-      owner: "byigitt",
-      name: "wordle-finder"
-    }
-  },
-  {
-    title: "Parolla Finder",
-    description: "Word finder tool for the Parolla game.",
-    github: "https://github.com/byigitt/parolla-finder",
-    tags: ["JavaScript", "CLI", "Word Games", "Helper"],
-    repo: {
-      owner: "byigitt",
-      name: "parolla-finder"
-    }
-  }
-]; 
+];

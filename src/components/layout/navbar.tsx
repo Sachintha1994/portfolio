@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { ModeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -39,10 +40,6 @@ const routes = [
     label: "Projects",
   },
   {
-    href: "/blog",
-    label: "Blog",
-  },
-  {
     href: "/achievements",
     label: "Achievements",
   },
@@ -55,6 +52,7 @@ const routes = [
 const DRAG_THRESHOLD = 50;
 
 export function Navbar() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
@@ -110,7 +108,7 @@ export function Navbar() {
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
-      className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+      className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
       <div className="container flex h-14 items-center">
         {/* Desktop Navigation */}
@@ -124,16 +122,32 @@ export function Navbar() {
 
           {/* Centered Navigation */}
           <nav className="absolute left-1/2 -translate-x-1/2 flex items-center space-x-1 text-sm font-medium">
-            {routes.map((route) => (
-              <Link
-                key={route.href}
-                href={route.href}
-                className="relative px-3 py-1.5 group transition-colors hover:text-foreground text-foreground/60 rounded-md"
-              >
-                <span className="relative z-10">{route.label}</span>
-                <span className="absolute inset-0 bg-primary/10 rounded-md scale-95 opacity-0 transition-all duration-300 ease-out group-hover:scale-100 group-hover:opacity-100" />
-              </Link>
-            ))}
+            {routes.map((route) => {
+              const isActive = pathname === route.href;
+              return (
+                <Link
+                  key={route.href}
+                  href={route.href}
+                  className={`relative px-3 py-1.5 group transition-colors rounded-md ${
+                    isActive
+                      ? "text-foreground font-semibold"
+                      : "hover:text-foreground text-foreground/60"
+                  }`}
+                >
+                  <span className="relative z-10">{route.label}</span>
+                  <span
+                    className={`absolute inset-0 rounded-md transition-all duration-300 ease-out ${
+                      isActive
+                        ? "bg-primary/15 scale-100 opacity-100"
+                        : "bg-primary/10 scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100"
+                    }`}
+                  />
+                  {isActive && (
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-4 rounded-full bg-primary" />
+                  )}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Theme Toggle */}
@@ -167,17 +181,28 @@ export function Navbar() {
                 </div>
               </div>
               <nav className="flex flex-col gap-4">
-                {routes.map((route) => (
-                  <Link
-                    key={route.href}
-                    href={route.href}
-                    className="group relative block px-3 py-2 text-lg transition-colors rounded-md"
-                    onClick={handleLinkClick}
-                  >
-                    <span className="relative z-10 text-foreground/60 group-hover:text-foreground transition-colors">{route.label}</span>
-                    <span className="absolute inset-0 bg-primary/10 rounded-md scale-95 opacity-0 transition-all duration-300 ease-out group-hover:scale-100 group-hover:opacity-100" />
-                  </Link>
-                ))}
+                {routes.map((route) => {
+                  const isActive = pathname === route.href;
+                  return (
+                    <Link
+                      key={route.href}
+                      href={route.href}
+                      className={`group relative block px-3 py-2 text-lg transition-colors rounded-md`}
+                      onClick={handleLinkClick}
+                    >
+                      <span className={`relative z-10 transition-colors ${
+                        isActive
+                          ? "text-foreground font-semibold"
+                          : "text-foreground/60 group-hover:text-foreground"
+                      }`}>{route.label}</span>
+                      <span className={`absolute inset-0 rounded-md transition-all duration-300 ease-out ${
+                        isActive
+                          ? "bg-primary/15 scale-100 opacity-100"
+                          : "bg-primary/10 scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100"
+                      }`} />
+                    </Link>
+                  );
+                })}
               </nav>
             </SheetContent>
           </Sheet>

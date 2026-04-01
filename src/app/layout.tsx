@@ -11,40 +11,40 @@ const inter = Inter({
   preload: true,
 });
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://bayburt.lu'
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://thilina-weerasinghe.dev'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Barış Bayburtlu | Full Stack Developer',
-    template: 'Barış Bayburtlu | %s'
+    default: 'Thilina Weerasinghe | Software Engineer',
+    template: 'Thilina Weerasinghe | %s'
   },
-  description: 'Full Stack Developer specializing in React, Next.js, and modern web technologies. Exploring the intersection of design and development.',
-  keywords: ['Full Stack Developer', 'React', 'Next.js', 'TypeScript', 'Web Development', 'Software Engineer'],
-  authors: [{ name: 'Barış Bayburtlu' }],
-  creator: 'Barış Bayburtlu',
+  description: 'Software Engineer specializing in Java, Spring Boot, .NET, and cloud-native applications. Building scalable backend systems and modern full-stack solutions.',
+  keywords: ['Software Engineer', 'Java', 'Spring Boot', 'ASP.NET', 'C#', 'React', 'Angular', 'AWS', 'Docker', 'Kubernetes', 'PostgreSQL', 'MySQL'],
+  authors: [{ name: 'Thilina Weerasinghe' }],
+  creator: 'Thilina Weerasinghe',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://bayburt.lu',
-    siteName: 'Barış Bayburtlu - Portfolio',
-    title: 'Barış Bayburtlu | Full Stack Developer',
-    description: 'Full Stack Developer specializing in React, Next.js, and modern web technologies.',
+    url: baseUrl,
+    siteName: 'Thilina Weerasinghe - Portfolio',
+    title: 'Thilina Weerasinghe | Software Engineer',
+    description: 'Software Engineer specializing in Java, Spring Boot, .NET, and cloud-native applications.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Barış Bayburtlu - Full Stack Developer'
+        alt: 'Thilina Weerasinghe - Software Engineer'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Barış Bayburtlu | Full Stack Developer',
-    description: 'Full Stack Developer specializing in React, Next.js, and modern web technologies.',
+    title: 'Thilina Weerasinghe | Software Engineer',
+    description: 'Software Engineer specializing in Java, Spring Boot, .NET, and cloud-native applications.',
     images: ['/og-image.jpg'],
-    creator: '@bariscmb'
+    creator: '@thilina_w'
   },
   robots: {
     index: true,
@@ -60,6 +60,9 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
     yandex: 'your-yandex-verification-code',
+  },
+  icons: {
+    icon: '/icon.png',
   }
 };
 
